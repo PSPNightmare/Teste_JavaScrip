@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+
+  <body class="">
+    <header class="flex items-center bg-gray-400 justify-between p-3">
+      <a href="Teste.html">
+        <img
+          class="h-20 rounded-sm"
+          src="https://i.insider.com/503660c8ecad04160f000019?width=700&format=jpeg&auto=webp"
+          alt="Logo"
+          class="h-12 rounded-sm"
+        />
+      </a>
+    </header>
+
+    <!-- Caixa do Formulário -->
+    <div class="flex flex-col items-center justify-center p-4">
+      <div
+        class="flex flex-col items-center justify-between bg-gray-400 p-18 h-100 m-50 rounded-lg"
+      >
+        <div>
+          <h1 class="m-0 bg-white rounded-md p-2">Login</h1>
+        </div>
+        <div class="flex flex-col items-center justify-center">
+          <!-- Input Usuário -->
+          <input
+            class="bg-white text-black border border-black rounded-sm p-2 m-2"
+            type="text"
+            id="CaixaTextoUsuario"
+            placeholder="Usuário"
+          />
+
+          <!-- Input Senha -->
+          <input
+            class="bg-white text-black border border-black rounded-sm p-2 m-2"
+            type="password"
+            id="CaixaTextoSenha"
+            placeholder="Senha"
+          />
+
+          <!-- Botões -->
+          <div class="flex items-center justify-center">
+            <button
+              class="bg-blue-500 hover:bg-blue-600 text-white p-2 m-4 rounded-sm transition-colors duration-400"
+              onclick="addNome()"
+            >
+              Adicionar
+            </button>
+
+            <button
+              class="bg-blue-500 hover:bg-blue-600 text-white p-2 m-4 rounded-sm transition-colors duration-400"
+              onclick="abrirPopUp()"
+            >
+              Mostrar Lista
+            </button>
+
+
+          
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Pop up -->
+<dialog id="meuPopUp" class="backdrop:bg-black/50 p-6 rounded-lg bg-white border border-gray-300 w-80 shadow-2xl fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 m-0">
+  
+  <!-- Cabeçalho do Pop-up -->
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-xl font-bold text-gray-800">Usuários</h2>
+    
+    <!-- Botão de X para fechar a caixa -->
+    <button onclick="fecharPopUp()" class="text-gray-500 hover:text-red-500 font-bold text-xl cursor-pointer">✕</button>
+
+  </div>
+
+  <!-- A sua lista de usuários se mudou para cá! -->
+  <ul id="listaUsuarios" class="flex flex-col gap-2 my-4"></ul>
+
+</dialog>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
